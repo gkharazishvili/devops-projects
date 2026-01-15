@@ -5,8 +5,8 @@ persistence:
   defaultClassReplicaCount: 1
 
   service:
-  ui:
-    # -- Service type for Longhorn UI. (Options: "ClusterIP", "NodePort", "LoadBalancer", "Rancher-Proxy")
-    type: NodePort
-    # -- NodePort port number for Longhorn UI. When unspecified, Longhorn selects a free port between 30000 and 32767.
-    nodePort: 32000
+    ui:
+      # -- Service type for Longhorn UI. (Options: "ClusterIP", "NodePort", "LoadBalancer", "Rancher-Proxy")
+      type: NodePort
+      # -- NodePort port number for Longhorn UI. When unspecified, Longhorn selects a free port between 30000 and 32767.
+      nodePort: 32000

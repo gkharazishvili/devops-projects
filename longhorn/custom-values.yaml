@@ -1,5 +1,5 @@
 longhornUI:
-  replicas: 2
+  replicas: 3
 
 persistence:
   defaultClassReplicaCount: 1
@@ -10,3 +10,4 @@ service:
     type: NodePort
     # -- NodePort port number for Longhorn UI. When unspecified, Longhorn selects a free port between 30000 and 32767.
     nodePort: 32000
+

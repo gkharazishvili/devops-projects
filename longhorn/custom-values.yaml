@@ -7,7 +7,7 @@ persistence:
 service:
   ui:
     # -- Service type for Longhorn UI. (Options: "ClusterIP", "NodePort", "LoadBalancer", "Rancher-Proxy")
-    type: NodePort
+    type: ClusterIP
     # -- NodePort port number for Longhorn UI. When unspecified, Longhorn selects a free port between 30000 and 32767.
     #nodePort: 32000
 
@@ -23,4 +23,5 @@ httproute:
   pathType: PathPrefix
   annotations:
     custom-annotation: "value"
+
 

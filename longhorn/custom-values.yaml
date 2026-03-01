@@ -4,24 +4,23 @@ longhornUI:
 persistence:
   defaultClassReplicaCount: 1
 
-#service:
-  #ui:
+service:
+  ui:
     # -- Service type for Longhorn UI. (Options: "ClusterIP", "NodePort", "LoadBalancer", "Rancher-Proxy")
-    #type: NodePort
+    type: NodePort
     # -- NodePort port number for Longhorn UI. When unspecified, Longhorn selects a free port between 30000 and 32767.
     #nodePort: 32000
 
 httproute:
   enabled: true
   parentRefs:
-    - name: primary-gateway
-      namespace: gateway-system
-    - name: secondary-gateway
-      namespace: gateway-system
-      sectionName: https  # Target specific listener
+    - name: api-gateway
+      namespace: istio-system
+      sectionName: http
   hostnames:
     - adunao.de
   path: /longhorn
   pathType: PathPrefix
   annotations:
     custom-annotation: "value"
+

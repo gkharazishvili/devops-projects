@@ -14,7 +14,7 @@ service:
 httproute:
   enabled: true
   parentRefs:
-    - name: api-gateway
+    - name: gateway-api
       namespace: istio-system
       sectionName: http
   hostnames:
@@ -23,5 +23,6 @@ httproute:
   pathType: PathPrefix
   annotations:
     custom-annotation: "value"
+
 
 
